@@ -1,0 +1,8 @@
+packages:
+  - voc-portal
+  - voc-components
+  - voc-editor
+  - voc-client
+  - voc-mock
+  - voc-ai
+  - packages/**
