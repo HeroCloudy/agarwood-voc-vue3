@@ -4,6 +4,7 @@
   "description": "基于 vue3 和 nuxt4 实现调查问卷系统，含问卷编辑、统计及C端提交问卷",
   "main": "index.js",
   "scripts": {
+    "portal:dev": "pnpm --filter=@agarwood-voc-vue3/voc-portal dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
