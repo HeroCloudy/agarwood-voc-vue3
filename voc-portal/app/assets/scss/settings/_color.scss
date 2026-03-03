@@ -1,0 +1,73 @@
+@use "sass:color";
+
+// 品牌与状态色
+$wm-color-primary: #1C9399;
+$wm-color-success: #3DBE7D;
+$wm-color-warning: #FFB74D;
+$wm-color-danger: #F1524C;
+$wm-color-info: #5E7CE0;
+
+// 中性色 - 文字
+$wm-color-text-primary: #303133;
+$wm-color-text-regular: #606266;
+$wm-color-text-secondary: #909399;
+$wm-color-text-placeholder: #A8ABB2;
+$wm-color-text-disabled: #C0C4CC;
+
+// 中性色 - 边框
+$wm-border-color-base: #DCDFE6;
+$wm-border-color-light: #E4E7ED;
+
+// 中性色 - 背景
+$wm-bg-color-page: #F5F7FA;
+$wm-bg-color-base: #FFFFFF;
+
+// 默认主题 白天模式
+:root {
+  // 品牌/状态色及其色阶
+  @each $type, $color in (primary, $wm-color-primary),
+          (success, $wm-color-success),
+          (danger, $wm-color-danger),
+          (warning, $wm-color-warning),
+          (info, $wm-color-info) {
+
+    --wm-color-#{$type}: #{$color};
+
+    // 生成浅色变体 (混合白色)
+    @each $i in (1, 2, 3, 5, 7, 8, 9) {
+      --wm-color-#{$type}-light-#{$i}: #{color.mix(#fff, $color, $i * 10%)};
+    }
+
+    // 生成深色变体 (混合黑色)
+    @each $i in (1, 2) {
+      --wm-color-#{$type}-dark-#{$i}: #{color.mix(#000, $color, $i * 10%)};
+    }
+  }
+
+  // 文字
+  --wm-color-text-primary: #{$wm-color-text-primary};
+  --wm-color-text-regular: #{$wm-color-text-regular};
+  --wm-color-text-secondary: #{$wm-color-text-secondary};
+  --wm-color-text-placeholder: #{$wm-color-text-placeholder};
+
+  // 边框
+  --wm-border-color-base: #{$wm-border-color-base};
+  --wm-border-color-light: #{$wm-border-color-light};
+
+  // 背景
+  --wm-bg-color-base: #{$wm-bg-color-base};
+  --wm-bg-color-page: #{$wm-bg-color-page};
+}
+
+// 深色主题覆盖
+[data-theme="dark"] {
+  --wm-color-text-primary: rgba(255, 255, 255, 0.95);
+  --wm-color-text-regular: rgba(255, 255, 255, 0.75);
+  --wm-color-text-secondary: rgba(255, 255, 255, 0.55);
+  --wm-color-text-placeholder: rgba(255, 255, 255, 0.35);
+
+  --wm-bg-color-page: #121212;
+  --wm-bg-color-base: #1a1a1a;
+  --wm-border-color-base: rgba(255, 255, 255, 0.12);
+}
+

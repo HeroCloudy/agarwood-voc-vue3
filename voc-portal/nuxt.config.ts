@@ -2,7 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/icon'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/icon',
+    '@unocss/nuxt',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+  ],
+  css: [
+    '~/assets/scss/index.scss', // 添加 SCSS 入口文件
+  ],
   devServer: {
     port: 8080,
   },
