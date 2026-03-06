@@ -10,8 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@element-plus/nuxt": "^1.1.5",
     "@nuxt/eslint": "1.15.2",
     "@nuxt/icon": "2.2.1",
+    "dayjs": "^1.11.19",
+    "element-plus": "^2.13.3",
     "nuxt": "^4.3.1",
     "pinia": "^3.0.4",
     "pinia-plugin-persistedstate": "^4.7.1",

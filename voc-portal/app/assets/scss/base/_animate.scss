@@ -1,0 +1,133 @@
+/* 动画效果 - 增强视觉体验 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(1) translateY(0);
+  }
+  50% {
+    transform: scaleX(1.2) scaleY(0.8) translateY(-10px);
+  }
+}
+
+/* 新增动画 */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes overlayShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes lineFloat {
+  0%,
+  100% {
+    transform: translateX(0) rotate(45deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(20px) rotate(45deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes dotsRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glareMove {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-30px, 30px) rotate(10deg);
+  }
+  50% {
+    transform: translate(0, 60px) rotate(0deg);
+  }
+  75% {
+    transform: translate(30px, 30px) rotate(-10deg);
+  }
+}
+
+@keyframes lightPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

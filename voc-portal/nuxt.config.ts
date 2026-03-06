@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
+    '@element-plus/nuxt',
   ],
   css: [
     '~/assets/scss/index.scss', // 添加 SCSS 入口文件
